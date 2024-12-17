@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import com.aire.fordapp.R
+import com.aire.fordapp.routes.RoutesGeneral
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
@@ -40,7 +41,7 @@ fun LoginScreen(navController: NavHostController) {
         }
         Button(
             onClick = {
-                navController.navigate("home")
+                navController.navigate(RoutesGeneral.DashboardScreen.route)
             },
             enabled = email.isNotEmpty() && password.isNotEmpty()
         ) {
